@@ -1,0 +1,44 @@
+@font-face {
+  font-family: "alte";
+  src: url("alte.ttf");
+}
+
+@font-face {
+  font-family: "exo2";
+  src: url("exo2.ttf");
+}
+
+@font-face {
+  font-family: "exo2L";
+  src: url("exo2L.ttf");
+}
+
+@font-face {
+  font-family: "garet";
+  src: url("garet.ttf");
+}
+
+@font-face {
+  font-family: "sansa";
+  src: url("sansation.ttf");
+}
+
+@font-face {
+  font-family: "scp";
+  src: url("scp.ttf");
+}
+
+@font-face {
+  font-family: "social";
+  src: url("socialDistrict.ttf");
+}
+
+@font-face {
+  font-family: "ttFors";
+  src: url("ttFors.ttf");
+}
+
+@font-face {
+  font-family: "ztG";
+  src: url("ztG.ttf");
+}
