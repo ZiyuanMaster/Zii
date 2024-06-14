@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Zii Store - Docs</title>
+  <link rel="stylesheet" href="../font/_font.css" type="text/css" media="all">
+<style>
+body {
+  min-width: 100vw; min-height: 100vh;
+  max-width: 100vw; max-height: 100vh;
+  width: 100vw; height: auto;
+  font: 14px 'exo2'; text-align: center;
+  background: rgba(200, 203, 210, 1);
+  color: rgba(50, 50, 55, .8);
+  margin: 0; padding: 0; inset: 0;
+  overflow: scroll;
+  user-select: none;
+}
+* {
+  position: relative;
+  width: auto; height: auto;
+  margin: 0; padding: 0; inset: 0;
+  overflow: hidden; box-sizing: content-box;
+  transition: all .2s ease-in-out;
+}
+img {
+  width: 100%;
+  margin: 0px 0px 10px;
+  border-radius: 5px;
+}
+a {
+  cursor: default;
+  text-decoration: underline rgba(50, 50, 225, .4);
+  color: rgba(50, 50, 225, .75);
+}
+footer {
+  background: rgba(250, 250, 255, .9);
+  padding: 10px 0px;
+}
+footer p {
+  font: bold 18px "social";
+}
+
+
+#headerCon {
+  display: flex; flex-wrap: wrap;
+  align-items: center; justify-content: flex-start;
+  width: 90vw; height: 45px;
+  background: rgba(250, 250, 255, .9);
+  margin: 15px auto 7.5px;
+  border-radius: 5px;
+  box-shadow:
+    1.5px 1.5px .5px -.5px rgba(50, 50, 50, .4),
+    1.5px 1.5px 2px 1.25px rgba(50, 50, 50, .2);
+  z-index: 1;
+}
+#headerTxt {
+  font: bold 20px "social";
+  text-indent: 10px; text-transform: capitalize;
+}
+
+
+
+#contents {
+  width: calc(90vw - 15px); height: auto;
+  margin: 0px auto; padding: 5px 7.5px;
+  counter-reset: items;
+}
+.txt {
+  font: bold 13px "alte";
+  text-align: justify; text-indent: 10px;
+  margin-bottom: 7.5px;
+}
+.table {
+  width: 100%; height: max-content;
+  background: rgba(250, 250, 255, .75);
+  margin: 0px auto 15px;
+  border: 1.5px solid rgba(5, 5, 5, .65);
+  border-radius: 5px;
+}
+.tableShortcuts, .gamesList {
+  font: bold 15px "exo2";
+  text-align: left; text-indent: 10px;
+  color: rgba(50, 50, 175, .75);
+  padding: 5px 0px;
+  border-bottom: 1.5px solid rgba(5, 5, 5, .65);
+}
+.tableShortcuts:last-child, .gamesList:last-child{
+  border-bottom: none;
+}
+.tableShortcuts::before, .gamesList::before {
+  content: "• ";
+  color: rgba(5, 5, 5, .65);
+}
+.subHeaderTxt {
+  width: max-content; height: auto;
+  font: bold 20px "social";
+  text-transform: uppercase; word-spacing: 1px;
+  color: rgba(5, 5, 5, .8);
+  margin: 0px 0px 2.5px;
+}
+.conc {
+  font: bold 14px "alte";
+  text-align: justify;
+  margin-bottom: 2.5px; padding-left: 5px;
+}
+.conc::before {
+  counter-increment: items;
+  content: counter(items) ". ";
+}
+</style>
+</head>
+<body>
+  
+  <div id="headerCon">
+    <p id="headerTxt">Zii Store - Documents</p>
+  </div>
+  
+  <div id="contents">
+    <img src="https://www.dropbox.com/scl/fi/ypkpxfcw8er018rr90psb/Zii.png?rlkey=d7eqzsa84swd7csgmzeul8ze4&dl=1" alt="Zii">
+    
+    <p class="txt">Selamat datang di dokumentasi Zii Store, di halaman ini akan menyediakan cara untuk mengecek Username atau In-Game Name (IGN) di dalam Games. Pastikan untuk mengikuti langkah-langkahnya dengan benar agar tidak terjadi kesalahan...</p>
+    <p class="txt">Berikut ini adalah tabel isi yang mencakup keseluruhan Sub Headers, klik untuk langsung menuju ke konten di dalamnya:</p>
+    
+    <div class="table"></div>
+    
+    <p class="subHeaderTxt">Perkenalan</p>
+    <p class="txt">Sebelumnya ini merupakan project solo dari Author Ziyuan dan saya selaku Author hanya mengandalkan website yang dapat hosting basic HTML secara gratis. Oleh karena itu, lingkungan menjadi tidak memadai. Ini mengakibatkan Author tidak dapat merancang kode Node JS yang bisa secara langsung memeriksa Username atau In-Game Name (IGN) kalian.</p>
+    <p class="txt">Tapi jangan khawatir, Author sudah menyediakan cara lain agar kalian dapat melakukan hal yang serupa hanya dengan satu aplikasi saja!</p>
+    <p class="txt"></p>
+    
+    <p class="subHeaderTxt">HTTP Shortcuts</p>
+    <img src="https://www.dropbox.com/scl/fi/k9x7cbsaos8yvgj2wdais/HTTP-Shortcuts.png?rlkey=n06q9ghoeb35na2y2k7x4w1ti&dl=1" alt="HTTP Shortcuts">
+    <p class="txt">Ya, nama aplikasinya adalah HTTP Shortcuts! Disini kalian dapat melakukan permintaan HTTP yang dilengkapi fitur Variables dan Script untuk penggunaan yang lebih bervariasi.</p>
+    <img src="https://www.dropbox.com/scl/fi/pkgugvwx11vfk8rgo05b4/HTTPRequest.png?rlkey=plqy8skckfttz8735pc8wyy9k&dl=1" alt="HTTPRequest">
+    <p class="txt">Sebelumnya, Author akan menjelaskan sedikit tentang HTTP Request (Permintaan HTTP), HTTP Request adalah suatu mekanisme pengiriman data pada protokol HTTP yang digunakan pada saat melakukan pengiriman data dari sisi client ke sisi server. Singkatnya, kalian dapat menerima sepenggal database yang disediakan server tersebut hanya dengan permintaan saja! Namun perlu diingat, permintaan yang kalian berikan harus serupa dengan yang disediakan server tujuan, jika permintaan melenceng dari apa yang disediakan, maka server tersebut hanya akan mengembalikan nilai eror!</p>
+    <p class="txt">Tidak perlu membuang waktu lebih lama lagi, Author sudah menyediakan link untuk mendownload aplikasi <a href="https://play.google.com/store/apps/details?id=ch.rmy.android.http_shortcuts">HTTP Shortcuts</a>.</p>
+    <p class="txt"></p>
+    
+    <p class="subHeaderTxt">Impor Dan Eksekusi</p>
+    <img src="https://www.dropbox.com/scl/fi/jrvrbf1yqv5bhmikg40co/Collections.png?rlkey=ru46mf2mimwyf4gs8sbl875wu&dl=1" alt="Collections">
+    <p class="txt">Bisa dibilang cukup mudah untuk mengimpor koleksi games di aplikasi HTTP Shortcuts dan Author sudah menyiapkan koleksi Check ID Games untuk semua games yang ada di Zii Store loh! Tapi Author tegaskan kepada kalian untuk memastikan sudah menginstall aplikasi HTTP Shortcuts. Selanjutnya kalian hanya perlu memilih game yang kalian inginkan pada tabel di bawah ini, tekan tombol "OK" dan koleksi tersebut akan secara otomatis ditambahkan ke dalam koleksi kalian.</p>
+    <p class="txt">Berikut adalah tabel berisikan daftar games yang dapat kalian pilih sesuka hati:</p>
+    
+    <div class="table"></div>
+    
+    <p class="txt">Setelah koleksi Author ditambahkan ke dalam koleksi kalian, yang perlu dilakukan hanya kembali ke menu utama HTTP Shortcuts, klik game yang diinginkan dan kemudian mengisi User ID (dan Server jika ada). Dengan begitu hasilnya akan muncul dalam beberapa saat!</p>
+    <p class="txt"></p>
+    
+    <p class="subHeaderTxt">Kesimpulan</p>
+    <p class="txt">Berikut kesimpulan dari langkah-langkah menggunakan aplikasi HTTP Shortcuts:</p>
+    
+    <p class="conc">Download aplikasi <a href="https://play.google.com/store/apps/details?id=ch.rmy.android.http_shortcuts">HTTP Shortcuts</a>,</p>
+    <p class="conc">Pilih game yang diinginkan dari tabel,</p>
+    <p class="conc">Tekan tombol "OK" dan kembali ke menu utama,</p>
+    <p class="conc">Pilih game dari koleksi HTTP Shortcuts,</p>
+    <p class="conc">Mengisi User ID (dan Server jika ada),</p>
+    <p class="conc">Hasil akan muncul dalam beberapa saat.</p>
+    <p class="txt"></p>
+    
+    <p class="subHeaderTxt">Penutup</p>
+    <p class="txt">Udah abis bang, capek gw cok...</p>
+  </div>
+  
+  <footer>
+    <p>© Zii 2024</p>
+  </footer>
+  
+<script src="../_data.js"></script>
+<script>
+window.addEventListener("DOMContentLoaded", () => {
+  let sHTxt = document.querySelectorAll(".subHeaderTxt");
+  let tCTxt = document.querySelectorAll(".table");
+  
+  for (let i = 0; i < sHTxt.length; i++) {
+    let a = document.createElement("p");
+    let b = sHTxt[i];
+    
+    a.classList.add("tableShortcuts");
+    a.textContent = b.textContent;
+    
+    tCTxt[0].appendChild(a);
+  }
+  
+  for (let i = 0; i < dataKeys.length; i++) {
+    let a = document.createElement("p");
+    
+    a.classList.add("gamesList");
+    a.textContent = dataKeys[i];
+    
+    tCTxt[1].appendChild(a);
+  }
+  
+  let tS = document.querySelectorAll(".tableShortcuts");
+  let gL = document.querySelectorAll(".gamesList");
+  
+  for (let i = 0; i < tS.length; i++) {
+    tS[i].addEventListener("click", function() {
+      sHTxt[i].scrollIntoView({behavior: "instant"});
+    })
+  }
+  
+  let hSL = "https://http-shortcuts.rmy.ch/import?url=";
+  let hSC = [
+    hSL + "https://drive.google.com/uc?export=download%26id=1sd8m8BnajZFhkeMpH5B2YF_Ah22l9JyZ",
+    hSL + "https://drive.google.com/uc?export=download%26id=1seS-oqDZ34XH5ndm55hsF6VGW6EV9UWT",
+    hSL + "https://drive.google.com/uc?export=download%26id=1sf4dDdLFlY7GXmRxpRohL9qMlTC3zenc",
+    hSL + "https://drive.google.com/uc?export=download%26id=1uWYq9XsQ_Vhrz5VhgjDebyW_I7zIo9gg",
+    hSL + "https://drive.google.com/uc?export=download%26id=1uZEJ2RG_8EDOrhk6bl9W38sDiopYs9dA",
+    hSL + "https://drive.google.com/uc?export=download&id=1u356asV1vzeCvr5OWVb8py6Vznzp4a1w",
+    hSL + "https://drive.google.com/uc?export=download%26id=1unA1A7RVy-g33BqixFv_erlSm32g8033"
+  ];
+  
+  for (let i = 0; i < gL.length; i++) {
+    gL[i].setAttribute("cLink", hSC[i])
+    
+    gL[i].addEventListener("click", function() {
+      window.location.assign(gL[i].getAttribute("cLink"));
+    })
+  }
+})
+</script>
+</body>
+</html>
