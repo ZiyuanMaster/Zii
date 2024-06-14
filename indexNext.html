@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Zii Store - Next</title>
+  <link rel="stylesheet" href="./font/_font.css" type="text/css" media="all">
+  <link rel="stylesheet" href="styleNext.css" type="text/css" media="all" >
+</head>
+<body>
+  
+  <div id="header">
+    <img id="toBack">
+    <p id="copyright"></p>
+  </div>
+  
+  <div id="formCon">
+    <hr>
+    
+    <div id="selectedCon">
+      <img id="selectedIcn">
+      <span id="selectedDetails">
+        <p id="selectedObj"></p>
+        <p id="selectedDev"></p>
+      </span>
+      <span id="playStoreLink">
+        <a href="#" target="_blank" id="linkTxt"></a>
+      </span>
+    </div>
+    
+    <div id="dataCon">
+      <p id="dataHeaderTxt"></p>
+      <input type="text" id="soloDataValue" placeholder="Input UID Here" maxlength="35">
+      <input type="text" id="dualDataValue" placeholder="Input UID Here" maxlength="23">
+      <input type="text" id="zoneDataValue" placeholder="Server" maxlength="10">
+      <input type="text" id="zonePickValue" placeholder="Server" readonly>
+      
+      <a href="#" id="toZiiDocs" target="_blank"></a>
+    </div>
+    
+    <div id="productsCon">
+      <p id="productType"></p>
+      <span id="productContents"></span>
+    </div>
+    
+    <button id="payment"></button>
+    <p id="payInfo"></p>
+  </div>
+  
+  <div id="detailsCon">
+    <span id="detailContents">
+      <p id="detailProduct"></p>
+      <p id="detailPrice"></p>
+    </span>
+    <button id="buy"></button>
+  </div>
+  
+    <div id="optionCon">
+      <div id="optionContents"></div>
+    </div>
+  
+  <div id="loadCon"><div id="spin"></div></div>
+  
+<script src="_data.js"></script>
+<script src="mainNext.js"></script>
+</body>
+</html>

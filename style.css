@@ -1,0 +1,166 @@
+
+  /*  INNER STYLES  */
+
+body {
+  position: fixed;
+  min-width: 100vw; min-height: 100vh;
+  max-width: 100vw; max-height: 100vh;
+  width: 100vw; height: 100vh;
+  font: 14px 'exo2'; text-align: center;
+  background: rgba(200, 203, 210, 1);
+  color: rgba(50, 50, 55, .8);
+  margin: 0; padding: 0; inset: 0;
+  overflow: hidden;
+  user-select: none;
+}
+* {
+  position: relative;
+  width: auto; height: auto;
+  margin: 0; padding: 0; inset: 0;
+  overflow: hidden; box-sizing: content-box;
+  scroll-behavior: smooth;
+  transition: all .2s ease-in-out;
+}
+input::placeholder {
+  color: rgba(50, 50, 55, .35);
+}
+hr {
+  width: 92.5vw;
+  margin: 0px auto 12.5px;
+  border: 1px solid rgba(5, 5, 5, .1);
+}
+
+  /*  HEADER STYLES  */
+
+#header {
+  display: flex; flex-wrap: wrap;
+  align-items: center; justify-content: flex-start;
+  width: 90vw; height: 45px;
+  background: rgba(250, 250, 255, .9);
+  margin: 15px auto;
+  border-radius: 5px;
+  box-shadow:
+    1.5px 1.5px .5px -.5px rgba(50, 50, 50, .4),
+    1.5px 1.5px 2px 1.25px rgba(50, 50, 50, .2);
+  overflow: hidden; z-index: 1;
+}
+#search {
+  width: 22.5px; height: 22.5px;
+  padding: 5px 10px;
+  border-right: 1px solid black;
+}
+#searchInput {
+  width: calc(100% - 43.5px); height: 45px;
+  font: bold 16px "alte";
+  text-indent: 7.5px; letter-spacing: 1px;
+  background: transparent;
+  border: none; outline: none;
+}
+#searchInput::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 19px; height: 19px;
+  background: url("https://www.dropbox.com/scl/fi/jwsh5d8ec9yz147ioksi6/cross.png?rlkey=z24vqc5en425fox8eo4bvkq1u&dl=1") no-repeat center;
+  background-size: contain;
+  margin: 0px 10px 0px 0px;
+}
+
+  /*  GAMESCON STYLE  */
+
+#gamesCon {
+  width: 100vw; height: auto;
+  overflow: hidden;
+}
+#gamesTxt {
+  font: bold 20px "ztG"; text-transform: uppercase;
+  letter-spacing: .5px; word-spacing: -.5px;
+  margin: 0px;
+}
+#gamesContents {
+  display: flex; flex-wrap: wrap;
+  align-items: center; justify-content: start;
+  width: 90%; height: auto;
+  margin: 0px auto;
+  overflow: hidden;
+}
+.gameCon {
+  width: 27.5%; height: 140px;
+  background: rgba(0, 75, 150, .125);
+  margin: 0px calc((17.5% - 40.9px) / 6) 6.5px;
+  padding: 7.5px 5px;
+  border: 2px solid rgba(0, 75, 150, .8);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.gameIcn {
+  width: 85%; height: auto;
+  border: 3.5px solid rgba(0, 75, 150, .8);
+  border-radius: 20px;
+  image-rendering: high-quality;
+}
+.gameObj {
+  font: bold 12px "ztG";
+  letter-spacing: .5px; word-spacing: -.65px;
+  color: rgba(0, 75, 150, .8);
+  margin: 2.5px 0px;
+}
+#toNext {
+  position: absolute; cursor: default;
+  width: 100%; height: 100%;
+  inset: 0;
+}
+
+  /*  LOADCON STYLES  */
+
+#loadCon {
+  position: fixed; display: flex;
+  align-items: center; justify-content: center;
+  flex-wrap: wrap;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, .85);
+  inset: 0; z-index: 1;
+  opacity: 0; visibility: hidden;
+  overflow: hidden;
+}
+#loadCon::after {
+  content: ""; position: fixed;
+  display: flex; flex-wrap: wrap;
+  align-items: center; justify-content: center;
+  width: 100px; height: 100px;
+  background: rgba(250, 250, 250, .9);
+  border-radius: 10px;
+  transition: var(--trs, all .35s .15s ease);
+  opacity: var(--opc, 0);
+  visibility: var(--vsb, hidden);
+  z-index: 1;
+}
+
+#spin {
+  position: relative; display: inline-block;
+  width: 55px; height: 55px;
+  opacity: 0; visibility: hidden;
+  overflow: visible; z-index: 2;
+}
+#spin::after, #spin::before {
+  content: ''; position: absolute;
+  width: 55px; height: 55px;
+  top: 0; left: 0;
+  border: 2.5px solid rgb(100, 150, 250);
+  box-sizing: border-box;
+  animation: rotation .8s linear infinite;
+  animation-play-state: var(--aps, paused);
+}
+#spin::after {
+  border-color: rgb(250, 100, 100);
+  animation-delay: .075s;
+  animation-direction: reverse;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
